@@ -1,8 +1,9 @@
 import { MdOutlineStarBorder } from "react-icons/md";
-const Book = ({book}) => {
-    const {bookName,author,image,rating,tags,category} = book || {};
+import { Link } from "react-router-dom";
+const BookCard = ({book}) => {
+    const {id,bookName,author,image,rating,tags,category} = book || {};
     return (
-        <div>
+        <Link to={`/bookcard/${id}`}>
             <div className="card card-compact bg-base-100 border p-6">
               <div className="flex justify-center py-8 bg-[#F3F3F3] rounded-2xl">
                     <img className="h-[200px] w-[150px]"  src={image} alt="Shoes" />
@@ -26,10 +27,10 @@ const Book = ({book}) => {
                 </div>
               </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
-export default Book;
+export default BookCard;
 
 

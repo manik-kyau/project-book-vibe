@@ -1,6 +1,6 @@
 [
     {
-        "bookId": 1,
+        "id": 1,
         "bookName": "The Great Gatsby",
         "author": "F. Scott Fitzgerald",
         "image": "https://i.ibb.co/cvX6TJV/1.png",
@@ -13,7 +13,7 @@
         "yearOfPublishing": 1925
     },
     {
-        "bookId": 2,
+        "id": 2,
         "bookName": "To Kill a Mockingbird",
         "author": "Harper Lee",
         "image": "https://i.ibb.co/jb52SCj/2.png",
@@ -26,7 +26,7 @@
         "yearOfPublishing": 1960
     },
     {
-        "bookId": 3,
+        "id": 3,
         "bookName": "1984",
         "author": "George Orwell",
         "image": "https://i.ibb.co/N6XxqCY/3.png",
@@ -39,7 +39,7 @@
         "yearOfPublishing": 1949
     },
     {
-        "bookId": 4,
+        "id": 4,
         "bookName": "Pride and Prejudice",
         "author": "Jane Austen",
         "image": "https://i.ibb.co/NWyH4dD/4.png",
@@ -52,7 +52,7 @@
         "yearOfPublishing": 1813
     },
     {
-        "bookId": 5,
+        "id": 5,
         "bookName": "The Catcher in the Rye",
         "author": "J.D. Salinger",
         "image": "https://i.ibb.co/9Z7jhsJ/5.png",
@@ -65,7 +65,7 @@
         "yearOfPublishing": 1951
     },
     {
-        "bookId": 6,
+        "id": 6,
         "bookName": "The Lord of the Rings",
         "author": "J.R.R. Tolkien",
         "image": "https://i.ibb.co/VVc2bnJ/6.png",
@@ -78,7 +78,7 @@
         "yearOfPublishing": 1954
     },
     {
-        "bookId": 7,
+        "id": 7,
         "bookName": "Crime and Punishment",
         "author": "Fyodor Dostoevsky",
         "image": "https://i.ibb.co/Ch0Xgjj/7.png",
@@ -91,7 +91,7 @@
         "yearOfPublishing": 1866
     },
     {
-        "bookId": 8,
+        "id": 8,
         "bookName": "The Hobbit",
         "author": "J.R.R. Tolkien",
         "image": "https://i.ibb.co/dB33Qj8/8.png",
@@ -104,7 +104,7 @@
         "yearOfPublishing": 1937
     },
     {
-        "bookId": 9,
+        "id": 9,
         "bookName": "The Picture of Dorian Gray",
         "author": "Oscar Wilde",
         "image": "https://i.ibb.co/4fdT5gn/9.png",
