@@ -1,10 +1,17 @@
 import { useLoaderData, useParams } from "react-router-dom"; 
+import { saveDataToLS } from "../../Utility/localstorage";
 
 const BookDetails = () => {
+
     const books = useLoaderData();
     const {id} = useParams();
-    const book = books.find(item =>item.id == id);
+    const intId = parseInt(id)
+    const book = books.find(item =>item.id == intId);
     const {bookName,author,image,rating,tags,category,yearOfPublishing,publisher,totalPages,review} =book || {};
+    const handleReadBtn = () =>{
+        saveDataToLS(intId);
+    }
+
     return (
         <div>
             <div className=" my-12">
@@ -19,7 +26,9 @@ const BookDetails = () => {
                   <p className="text-base font-normal py-6">{review}</p>
                   <p  className="pb-5 border-b-2">
                     <span className="text-base font-bold mr-4 ">tag:</span>
-                    <span className="base font-medium text bg-[#23be0a0d] rounded-[30px] text-center text-[#23BE0A] px-4 mr-6">{tags}</span>
+                    {
+                      tags.map((tag,idx)=><span key={idx} className="base font-medium text bg-[#23be0a0d] rounded-[30px] text-center text-[#23BE0A] px-4 mr-3 py-1">#{tag}</span>)
+                    }
                  </p>
                    <div className="flex gap-[55px]">
                         <div className="space-y-3 mt-6 mb-8 w-[140px]">
@@ -35,9 +44,9 @@ const BookDetails = () => {
                             <h2>{rating}</h2>
                         </div>
                    </div>
-                  <div className="space-x-4 text-lg font-semibold">
-                    <button className="btn bg-white hover:bg-white border-2 border-gray-300">Get Started</button>
-                    <button className="btn bg-[#50B1C9] hover:bg-[#50B1C9] text-white">Get Started</button>
+                  <div className="space-x-4 ">
+                    <button onClick={()=>handleReadBtn(book)} className="btn bg-white hover:text-white hover:bg-[#23BE0A] border-2 text-lg font-semibold border-gray-300 hover:border-[#23BE0A] px-7">Read</button>
+                    <button className="btn bg-[#50B1C9] text-lg font-semibold hover:bg-[#50B1C9] text-white">Wishlist</button>
                   </div>
                 </div>
               </div>
