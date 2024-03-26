@@ -18,10 +18,22 @@ const NavBar = () => {
                 <a className="text-3xl font-bold text-[#23BE0A]">Book Vibe</a>
               </div>
               <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                  <li  className="text-lg font-normal"><NavLink to='/'>Home</NavLink></li>
-                  <li  className="text-lg font-normal"><NavLink to='/listedbooks'>Listed Books</NavLink></li>
-                  <li  className="text-lg font-normal"><NavLink to='/pagestoread'>Pages to Read</NavLink></li>
+                <ul className="menu menu-horizontal px-1 space-x-4">
+                  <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
+                    <NavLink 
+                    to='/'
+                    className={({ isActive, isPending }) => isActive ? "text-green-400 font-bold text-xl border-2 border-[#23BE0A] bg-white " : isPending ? '' : "flex items-center text-xl font-semibold transition-colors" }
+                    >Home</NavLink></li>
+                  <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
+                    <NavLink 
+                    to='/listedbooks'
+                    className={({ isActive, isPending }) => isActive ? " font-bold text-xl border-2 border-[#23BE0A] bg-white " : isPending ? '' : "flex items-center text-xl font-semibold" }
+                    >Listed Books</NavLink></li>
+                  <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
+                    <NavLink 
+                    to='/pagestoread'
+                    className={({ isActive, isPending }) => isActive ? " font-bold text-xl border-2 border-[#23BE0A] bg-white " : isPending ? '' : "flex items-center text-xl font-semibold" }
+                    >Pages to Read</NavLink></li>
                 </ul>
               </div>
               <div className="navbar-end space-x-4">
