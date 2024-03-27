@@ -15,30 +15,30 @@ const NavBar = () => {
                     <li className="text-lg font-normal"><NavLink to='/pagestoread'>Pages to Read</NavLink></li>
                   </ul>
                 </div>
-                <a className="text-3xl font-bold text-[#23BE0A]">Book Vibe</a>
+                <a className="text-3xl font-bold text-[#23BE0A] WorkSans">Book Vibe</a>
               </div>
               <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 space-x-4">
                   <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
                     <NavLink 
                     to='/'
-                    className={({ isActive, isPending }) => isActive ? "text-green-400 font-bold text-xl border-2 border-[#23BE0A] bg-white " : isPending ? '' : "flex items-center text-xl font-semibold transition-colors" }
+                    className={({ isActive}) => isActive ? "text-[#23BE0A] font-bold text-lg border-2 border-[#23BE0A] bg-white WorkSans" : "text-lg font-bold WorkSans text-[#131313cc]" }
                     >Home</NavLink></li>
                   <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
                     <NavLink 
                     to='/listedbooks'
-                    className={({ isActive, isPending }) => isActive ? " font-bold text-xl border-2 border-[#23BE0A] bg-white " : isPending ? '' : "flex items-center text-xl font-semibold" }
+                    className={({ isActive}) => isActive ? "text-[#23BE0A] font-bold text-lg border-2 border-[#23BE0A] bg-white WorkSans" : "text-lg font-bold WorkSans text-[#131313cc]" }
                     >Listed Books</NavLink></li>
                   <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
                     <NavLink 
                     to='/pagestoread'
-                    className={({ isActive, isPending }) => isActive ? " font-bold text-xl border-2 border-[#23BE0A] bg-white " : isPending ? '' : "flex items-center text-xl font-semibold" }
+                    className={({ isActive}) => isActive ? "text-[#23BE0A] font-bold text-lg border-2 border-[#23BE0A] bg-white WorkSans" : "text-lg font-bold  WorkSans text-[#131313cc]" }
                     >Pages to Read</NavLink></li>
                 </ul>
               </div>
               <div className="navbar-end space-x-4">
-                <button className="btn text-lg font-semibold text-white bg-[#23BE0A] hover:bg-[#23BE0A]">Sign In</button>
-                <button className="btn text-lg font-semibold text-white bg-[#59C6D2] hover:bg-[#59C6D2]">Sign Up</button>
+                <button className="btn text-lg font-semibold text-white bg-[#23BE0A] hover:bg-[#23BE0A] WorkSans">Sign In</button>
+                <button className="btn text-lg font-semibold text-white bg-[#59C6D2] hover:bg-[#59C6D2] WorkSans">Sign Up</button>
               </div>
             </div>
         </div>

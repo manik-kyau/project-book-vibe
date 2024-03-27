@@ -11,16 +11,16 @@ const BookCard = ({book}) => {
 
                 <div className="flex gap-3">
                     {
-                        tags.map((tag, idx)=><h3 className="bg-[#23be0a0d] rounded-[30px] text-center text-base font-medium text-[#23BE0A] px-4 mt-6" key={idx}>{tag}</h3>)
+                        tags.map((tag, idx)=><h3 className="bg-[#23be0a0d] rounded-[30px] text-center text-base font-medium text-[#23BE0A] px-4 mt-6 WorkSans" key={idx}>{tag}</h3>)
                     }
                 </div>
               <div className="">
                 
-                <h2 className="text-2xl font-bold mt-4 mb-4">{bookName}</h2>
-                <p className="text-base font-medium mb-6 pb-5 border-b-2 border-dashed">By: {author}</p>
+                <h2 className="text-2xl font-bold mt-4 mb-4 playfair">{bookName}</h2>
+                <p className="text-base font-medium mb-6 pb-5 border-b-2 border-dashed WorkSans">By: {author}</p>
                 <div className="flex justify-between">
-                    <h2 className="text-base font-medium">{category}</h2>
-                    <h3 className="flex gap-2 items-center text-base font-medium">
+                    <h2 className="text-base font-medium WorkSans">{category}</h2>
+                    <h3 className="flex gap-2 items-center text-base font-medium WorkSans">
                         {rating}
                         <MdOutlineStarBorder className="h-5 w-5"></MdOutlineStarBorder>
                     </h3>
