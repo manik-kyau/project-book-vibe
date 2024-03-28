@@ -44,8 +44,8 @@ const BookDetails = () => {
                       tags.map((tag,idx)=><span key={idx} className="base font-medium text bg-[#23be0a0d] rounded-[30px] text-center text-[#23BE0A] px-4 mr-3 py-1 WorkSans">#{tag}</span>)
                     }
                  </p>
-                   <div className="flex gap-7 lg:gap-[55px]">
-                        <div className="space-y-3 mt-6 mb-8 w-[140px] ">
+                   <div className="flex gap-5 lg:gap-[55px]">
+                        <div className="space-y-3 mt-6 mb-8 w-[152px]">
                           <h2 className="text-base font-normal WorkSans">Number of Pages:</h2>
                           <h2 className="text-base font-normal WorkSans">Publisher:</h2>
                           <h2 className="text-base font-normal WorkSans">Year of Publishing:</h2>

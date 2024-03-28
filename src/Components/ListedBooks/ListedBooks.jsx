@@ -6,12 +6,12 @@ const ListedBooks = () => {
 
     return (
         <div className="">
-            <h2 className="text-[28px] font-bold py-8 bg-[#1313130d] text-center rounded-2xl my-8 WorkSans text-[#131313]">Books</h2>
+            <h2 className="text-[28px] font-bold py-8 bg-[#1313130d] text-center rounded-2xl my-8 WorkSans text-[#131313] playfair">Books</h2>
             
 
                 <div className=" text-center">
                 <select className="text-lg bg-[#23BE0A]  px-5 py-4 font-semibold outline-none text-white mx-auto rounded-lg WorkSans" name="" id="">
-                    <option className="text-black bg-gray-100 py-6" value="">Sort By</option>
+                    <option className="text-black bg-gray-100  py-6" value="">Sort By</option>
                     <option className="text-black bg-gray-100" value="">Rating</option>
                     <option className="text-black bg-gray-100" value="">Number Of Page</option>
                     <option className="text-black bg-gray-100" value="">Publisher Year</option>

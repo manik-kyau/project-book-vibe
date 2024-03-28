@@ -8,6 +8,7 @@ import ReadBooks from "../Components/ReadBooks/ReadBooks";
 import WishlistBooks from "../Components/WishlistBooks/WishlistBooks";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Contact from "../Components/Contact/Contact";
+import Faq from "../Components/FAQ/Faq";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             path: '/bookcard/:id',
             element: <BookDetails></BookDetails>,
             loader: ()=> fetch('/data.json'),
+        },
+        {
+          path: '/faq',
+          element: <Faq></Faq>,
         },
         {
           path: '/contact-us',

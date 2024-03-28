@@ -12,13 +12,24 @@ const NavBar = () => {
                   <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     <li className="text-lg font-normal"><NavLink to='/'>Home</NavLink></li>
                     <li className="text-lg font-normal"><NavLink to='/listedbooks'>Listed Books</NavLink></li>
+
+                    <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
+                    <NavLink 
+                    to='/faq'
+                    >FAQ</NavLink></li>
+
+                    <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
+                    <NavLink 
+                    to='/contact-us'
+                    >Contact Us</NavLink></li>
+
                     <li className="text-lg font-normal"><NavLink to='/pagestoread'>Pages to Read</NavLink></li>
                   </ul>
                 </div>
                 <a className="text-3xl font-bold text-[#23BE0A] WorkSans">Book Vibe</a>
               </div>
               <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 space-x-4">
+                <ul className="menu menu-horizontal px-1 space-x-3">
                   <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
                     <NavLink 
                     to='/'
@@ -29,16 +40,24 @@ const NavBar = () => {
                     to='/listedbooks'
                     className={({ isActive}) => isActive ? "text-[#23BE0A] font-bold text-lg border-2 border-[#23BE0A] bg-white WorkSans hover:text-white" : "text-lg font-bold WorkSans text-[#131313cc] hover:text-white" }
                     >Listed Books</NavLink></li>
+
                   <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
                     <NavLink 
-                    to='/pagestoread'
+                    to='/faq'
                     className={({ isActive}) => isActive ? "text-[#23BE0A] font-bold text-lg border-2 border-[#23BE0A] bg-white WorkSans hover:text-white" : "text-lg font-bold  WorkSans text-[#131313cc] hover:text-white" }
-                    >Pages to Read</NavLink></li>
+                    >FAQ</NavLink></li>
+
                   <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
                     <NavLink 
                     to='/contact-us'
                     className={({ isActive}) => isActive ? "text-[#23BE0A] font-bold text-lg border-2 border-[#23BE0A] bg-white WorkSans hover:text-white" : "text-lg font-bold  WorkSans text-[#131313cc] hover:text-white" }
                     >Contact Us</NavLink></li>
+
+                    <li  className="text-lg font-normal hover:bg-[#23BE0A] rounded-lg hover:text-white">
+                    <NavLink 
+                    to='/pagestoread'
+                    className={({ isActive}) => isActive ? "text-[#23BE0A] font-bold text-lg border-2 border-[#23BE0A] bg-white WorkSans hover:text-white" : "text-lg font-bold  WorkSans text-[#131313cc] hover:text-white" }
+                    >Pages to Read</NavLink></li>
                 </ul>
               </div>
               <div className="navbar-end space-x-4">
