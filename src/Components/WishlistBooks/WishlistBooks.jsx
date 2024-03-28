@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getStoredData, getStoredWishBooks } from "../../Utility/localstorage";
+import { getStoredWishBooks } from "../../Utility/localstorage";
 import WishingBookList from "../WishingBookList/WishingBookList";
 
 const WishlistBooks = () => {
@@ -9,7 +9,6 @@ const WishlistBooks = () => {
 
     useEffect(()=>{
         const getStoredBooks = getStoredWishBooks();
-        // const getReatBookId = getStoredData();
         if(books.length > 0 ){
             const clickedBook = [];
             for(const id of getStoredBooks){
@@ -17,8 +16,7 @@ const WishlistBooks = () => {
                 if(wishBook){
                     clickedBook.push(wishBook);
                 }
-                setBooksData(clickedBook)
-            
+                setBooksData(clickedBook);
             }
         }
     },[])

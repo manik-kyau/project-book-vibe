@@ -31,17 +31,17 @@ const PageToRead = () => {
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
       };
 
-      const CustomTooltip = ({ active, payload, label }) => {
-        if (active && payload && payload.length) {
-          return (
-            <div className="custom-tooltip bg-white p-4 bg-opacity-40 rounded-lg">
-              <p className="label">{`Name: ${label}`}</p>
-              <p className='label'>{`Page: ${payload[0].value}`}</p>
-            </div>
-          );
-        }
-        return null;
-      };
+      // const CustomTooltip = ({ active, payload, label }) => {
+      //   if (active && payload && payload.length) {
+      //     return (
+      //       <div className="custom-tooltip bg-white p-4 bg-opacity-70 rounded-lg">
+      //         <p className="label">{`Name: ${label}`}</p>
+      //         <p className='label'>{`Page: ${payload[0].value}`}</p>
+      //       </div>
+      //     );
+      //   }
+      //   return null;
+      // };
 
     return (
         <div className='flex justify-center items-center my-12 bg-gray-100 py-12 lg:py-24 rounded-3xl'>
@@ -64,8 +64,8 @@ const PageToRead = () => {
                   <Cell key={`cell-${index}`} fill={colors[index % 20]} />
                 ))}
               </Bar>
-              <Tooltip content={<CustomTooltip />} />
-              <Legend />
+              {/* <Tooltip content={<CustomTooltip/>} /> */}
+              <Legend/>
             </BarChart>
         </div>
     );

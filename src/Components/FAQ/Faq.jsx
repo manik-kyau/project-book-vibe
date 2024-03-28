@@ -2,7 +2,7 @@
 
 const Faq = () => {
     return (
-        <div className="bg-gray-100 rounded-3xl py-6 my-6 lg:my-12">
+        <div className="bg-gray-50 rounded-3xl py-6 my-6 lg:my-12">
             <section className="dark:bg-gray-100 dark:text-gray-800">
             	<div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
             		<h2 className="text-3xl lg:text-4xl font-bold  text-[#131313] mb-3 playfair">Frequently Asked Questions</h2>

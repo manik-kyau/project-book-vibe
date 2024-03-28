@@ -12,4 +12,4 @@ The following feature are alailable in Book Vibe Project:
 
 
 ### Project Live Link :
-https://neon-pony-e5feb8.netlify.app/
+https://courageous-semolina-b91c93.netlify.app/
