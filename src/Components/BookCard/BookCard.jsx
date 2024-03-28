@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types'
 import { MdOutlineStarBorder } from "react-icons/md";
 import { Link } from "react-router-dom";
 const BookCard = ({book}) => {
     const {id,bookName,author,image,rating,tags,category} = book || {};
     return (
         <Link to={`/bookcard/${id}`}>
-            <div className="card card-compact bg-base-100 border p-6">
-              <div className="flex justify-center py-8 bg-[#F3F3F3] rounded-2xl">
+            <div className="card card-compact bg-base-100 border rounded-xl p-6">
+              <div className="flex justify-center py-8 bg-[#F3F3F3] rounded-xl">
                     <img className="h-[200px] w-[150px]"  src={image} alt="Shoes" />
               </div>
 
@@ -30,7 +31,10 @@ const BookCard = ({book}) => {
         </Link>
     );
 };
-
+BookCard.propTypes = {
+    bookcard: PropTypes.object,
+    book: PropTypes.object.isRequired,
+}
 export default BookCard;
 
 

@@ -1,23 +1,32 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getStoredData } from "../../Utility/localstorage";
+import { getStoredData, getStoredWishBooks } from "../../Utility/localstorage";
+import WishingBookList from "../WishingBookList/WishingBookList";
 
 const WishlistBooks = () => {
     const books = useLoaderData();
-    // console.log(books)
     const [booksData, setBooksData] = useState([]);
 
     useEffect(()=>{
-        const getStoredBooks = getStoredData();
-        if(books.length > 0){
-            const storedBooks = books.filter(book => getStoredBooks.includes(book.id));
-            setBooksData(storedBooks);
-            console.log(storedBooks,books,getStoredBooks);
+        const getStoredBooks = getStoredWishBooks();
+        // const getReatBookId = getStoredData();
+        if(books.length > 0 ){
+            const clickedBook = [];
+            for(const id of getStoredBooks){
+                const wishBook = books.find(book => book.id == id);
+                if(wishBook){
+                    clickedBook.push(wishBook);
+                }
+                setBooksData(clickedBook)
+            
+            }
         }
     },[])
     return (
-        <div>
-            
+        <div className="space-y-10 mb-12">
+            {
+                booksData.map((book,idx)=><WishingBookList key={idx} book={book}></WishingBookList>)
+            }
         </div>
     );
 };

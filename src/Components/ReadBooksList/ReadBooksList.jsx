@@ -2,18 +2,19 @@ import PropTypes from 'prop-types';
 import { SlLocationPin } from "react-icons/sl";
 import { IoPeopleOutline } from "react-icons/io5";
 import page from '../../assets/images/page.png'
+import { Link } from 'react-router-dom';
 const ReadBooksList = ({books}) => {
-    const {bookName,author,image,rating,tags,category,yearOfPublishing,publisher,totalPages} = books || {};
+    const {id,bookName,author,image,rating,tags,category,yearOfPublishing,publisher,totalPages} = books || {};
     return (
         <div>
-            <div className="h-[270px] flex gap-12  border-2 p-5 rounded-2xl">
-                <div className="w-[230px] flex justify-center items-center bg-[#1313130d] rounded-2xl">
+            <div className="lg:h-[270px] flex flex-col lg:flex-row gap-7 lg:gap-12  border-2 p-5 rounded-2xl">
+                <div className="lg:w-[230px]  py-6 flex justify-center items-center bg-[#1313130d] rounded-2xl">
                     <img src={image} className="rounded-lg shadow-2xl" />
                 </div>
-                <div className="">
+                <div className="w-full">
                   <h1 className="text-2xl font-bold playfair text-[#131313]">{bookName}</h1>
                   <h2 className="text-base font-medium my-4 WorkSans text-[#131313cc]">By: {author}</h2>
-                  <div className="flex gap-6 w-full">
+                  <div className="flex flex-col lg:flex-row gap-6 w-full">
                     <div className="flex gap-3">
                         <h2 className="text-base font-bold WorkSans">Tags:</h2>
                         {
@@ -25,7 +26,7 @@ const ReadBooksList = ({books}) => {
                         Year of Publishing: {yearOfPublishing}
                     </p>
                   </div>
-                  <div className="flex gap-5 mt-4 pb-[18px] border-b-2"> 
+                  <div className="flex gap-5 mt-4 pb-[18px] border-b-2 "> 
                         <p className="flex items-center gap-2 WorkSans text-[#13131399]">
                             <IoPeopleOutline></IoPeopleOutline>
                             Publisher: {publisher}
@@ -35,10 +36,14 @@ const ReadBooksList = ({books}) => {
                             Page {totalPages}
                         </p>
                     </div>
-                  <div className="flex items-center gap-4 mt-4">
+                  <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-4 mt-4">
+                    <div className='flex gap-4'>
                     <h3 className="text-base font-normal text-[#328EFF] px-5 py-1 rounded-[30px] bg-[#328eff26] WorkSans">Category: {category}</h3>
                     <h2 className="text-base font-normal px-5 py-1 text-[#FFAC33] bg-[#ffac3326] rounded-[30px] WorkSans">Rating: {rating}</h2>
-                    <button className="text-white bg-[#23BE0A] text-lg font-semibold border-gray-300  px-5 py-1 rounded-[30px] WorkSans">View Details</button>
+                    </div>
+                    <Link to={`/bookcard/${id}`}>
+                        <button className="text-white bg-[#23BE0A] text-base lg:text-lg font-semibold border-gray-300  px-5 py-3 lg:py-1 rounded-[30px] WorkSans">View Details</button>
+                    </Link>
                     
                   </div>
                 </div>
@@ -47,7 +52,7 @@ const ReadBooksList = ({books}) => {
     );
 };
 ReadBooksList.propTypes={
-    ReadBooksList: PropTypes.object.isRequired,
+    readbookslist: PropTypes.object,
     books: PropTypes.object.isRequired,
 }
 
